@@ -1,0 +1,32 @@
+.align-text-center {
+	text-align: center;
+}
+
+.align-text-right {
+	text-align: right;
+}
+
+.heading-message {
+	font-weight: bold;
+  font-size: 30px;
+}
+
+.font-size-18{
+  font-size: 18px;
+}
+
+.vertical-separator-from-top-50 {
+	margin-top: 50px;
+}
+
+.vertical-separator-from-top-70 {
+	margin-top: 70px;
+}
+
+.vertical-separator-from-top-100 {
+	margin-top: 100px;
+}
+
+.margin-left-560 {    
+  margin-left: 560px;
+}

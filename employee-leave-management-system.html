@@ -1,0 +1,87 @@
+<html>
+  <head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Employee Leave Management Sytem</title>
+		<link rel='stylesheet' href='employee-leave-management-system.css'>	
+		<link rel='stylesheet' href='employee/employee.css'>	
+		<link rel='stylesheet' href='head/heads.css'>	
+		<script src='angular.js'></script>
+		<script src='employee-leave-management-system.js'></script>
+		<script src='employee-leave-management-system-controller.js'></script>
+		<script src='services/date-service.js'></script>
+		<script src='services/key-service.js'></script>
+		<script src='employee/employee-controller.js'></script>
+		<script src='employee/employee-component.js'></script>
+		<script src='employee/max-date-directive.js'></script>
+		<script src='head/head-component.js'></script>
+		<script src='head/head-controller.js'></script>
+	</head>
+	<body ng-app='employeeLeaveManagementSystem'
+			ng-controller='EmployeeLeaveManagementSystemCtrl'>
+		<div class='heading-message align-text-center'>
+            Employee Leave Management System
+    </div>		
+		<div class='align-text-center vertical-separator-from-top-50 font-size-18' ng-if='allowEntry'>
+			Welcome <b>{{currentUserDetails.username}}({{currentUserDetails.role}})</b>
+			<button ng-click='logOut()'>Log Out</button>
+		</div>
+		<div ng-if="allowEntry && currentUserDetails.role=='Employee'">
+			<employee username='{{currentUserDetails.username}}'></employee>
+		</div>
+		<div ng-if="allowEntry && currentUserDetails.role=='Head'">
+			<head-of-organization username='{{currentUserDetails.username}}'></head-of-organization>
+		</div>
+		<div class='vertical-separator-from-top-50' ng-if='!allowEntry'>
+			<div class='align-text-center font-size-18'><b>Login</b></div>			
+			<form name='loginForm'>		
+				<div class='margin-left-560'>
+					<div>
+						<label for="login-username">Enter Username</label>
+						<input name='loginUsername' id="login-username" ng-model='loginDetails.username' required>
+					</div>
+					<div>
+						<label for="login-password">Enter Password</label>
+						<input name='loginPassword' id="login-password" ng-model='loginDetails.password' type="password" required>
+					</div>
+					<div>
+						<button ng-click='login()'
+										ng-disabled='loginForm.loginUsername.$error.required ||
+																loginForm.loginPassword.$error.required'>
+							Login
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class='vertical-separator-from-top-100' ng-if='!allowEntry'>
+		<div class='align-text-center font-size-18'><b>Sign Up</b></div>			
+		<form name='signUpForm'>
+				<div class='margin-left-560'>
+					<div>
+						<label for="signup-username">Select Username</label>
+						<input name='signUpUsername' id="signup-username" ng-model='signUpDetails.username' required>
+					</div>
+					<div>
+						<label for="signup-password">Select Password</label>
+						<input name='signUpPassword' id="signup-password" ng-model='signUpDetails.password' type="password" required>
+					</div>
+					<span>Select the role</span>
+					<span ng-repeat='role in roles'>
+						<label>
+							<input name='roleType' type='radio' value='{{role}}'
+									ng-model='signUpDetails.role'
+									required='!signUpDetails.role'>{{role}}
+						</label>
+					</span>
+					<div>
+						<button ng-click='signUp()'
+										ng-disabled='signUpForm.roleType.$error.required ||
+																signUpForm.signUpUsername.$error.required ||
+																signUpForm.signUpPassword.$error.required'>
+							Sign Up
+						</button>
+					</div>
+				</div>
+			</form>
+		</body>
+</html>
