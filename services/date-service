@@ -1,0 +1,57 @@
+function DateService() {}
+
+
+/**
+ * Parse a 'Date' object to an object as mentioned in @return below.
+ *
+ * @private
+ * @param {Date} inputDate
+ * @return {{dd: string, mm: string, yyyy: string}} 
+ */
+function parseDate(inputDate) {
+	// Code taken from - https://stackoverflow.com/a/12409344/5928129
+	var dd = inputDate.getDate();
+	var mm = inputDate.getMonth() + 1; //January is 0!
+	var yyyy = inputDate.getFullYear();
+	
+	if (dd < 10){
+		dd = '0'+ dd;
+	} 
+	if (mm < 10){
+		mm = '0'+ mm;
+	} 	
+	return {
+		dd: dd,
+		mm: mm, 
+		yyyy: yyyy
+	};
+}
+
+
+/**
+ * Convert a 'Date' object in YYYY-MM-DD format.
+ *
+ * @param {Date} inputDate
+ * @return {string} 
+ */
+DateService.prototype.convertDateToYYYYMMDD = function(inputDate) {
+	var dateObj = parseDate(inputDate);
+	return dateObj.yyyy + '-' + dateObj.mm + '-' + dateObj.dd;
+}
+
+
+/**
+ * Convert a 'Date' object in DD-MM-YYYY format.
+ *
+ * @param {Date} inputDate
+ * @return {string} 
+ */
+DateService.prototype.convertDateToDDMMYYYY = function(inputDate) {
+	var dateObj = parseDate(inputDate);
+	return dateObj.dd + '-' + dateObj.mm + '-'+ dateObj.yyyy;	
+}
+
+
+angular
+				.module('employeeLeaveManagementSystem')
+				.service('dateService', DateService);
