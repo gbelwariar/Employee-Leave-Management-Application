@@ -1,0 +1,18 @@
+.text-area {
+    padding: 12px 20px;
+    margin-top: 15px;
+}
+
+table {
+	margin: auto; 
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
