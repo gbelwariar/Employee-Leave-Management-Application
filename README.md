@@ -3,4 +3,6 @@
 
 An employee leave management web application in which the employees of an organization can submit leave requests to the managers/head of the organization for their approval/rejection. 
  
- 
+## How to use/install the application 
+
+Download the repository - [Employee-Leave-Management-Application](https://github.com/gbelwariar/Employee-Leave-Management-Application) and open the home page - **employee-leave-management-system.html** (*Employee-Leave-Management-Application/employee-leave-management-system.html*) in any browser(preferably Mozilla Firefox). 
