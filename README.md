@@ -6,3 +6,6 @@ An employee leave management web application in which the employees of an organi
 ## How to use/install the application 
 
 Download the repository - [Employee-Leave-Management-Application](https://github.com/gbelwariar/Employee-Leave-Management-Application) and open the home page - **employee-leave-management-system.html** (*Employee-Leave-Management-Application/employee-leave-management-system.html*) in any browser(preferably Mozilla Firefox). 
+
+### → Home Page
+<kbd>![Home Page](/screenshots/Home_Page.GIF?raw=true "Home Page")<kbd>
