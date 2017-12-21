@@ -1,0 +1,34 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<div>
+	<table class='vertical-separator-from-top-50'>
+		<caption>Leave requests</caption>
+		<tr>
+			<th>Request No.</th>
+			<th>Requested By</th>
+			<th>Leave Date</th>
+			<th>Leave Reason</th>
+			<th>Submitted On</th>
+			<th>Select Status</th>
+			<th>Write Comment</th>
+			<th></th>
+		</tr>			
+		<tr ng-repeat='leaveRequest in headCtrl.allLeaveRequests track by $index'>
+			<td>{{$index+1}}</td>
+			<td>{{leaveRequest.username}}
+			<td>{{leaveRequest.leave_date}}</td>
+			<td>{{leaveRequest.leave_reason}}</td>
+			<td>{{leaveRequest.submission_date}}</td>
+			<td>			
+				<select ng-model='leaveRequest.status'>
+					<option value="Pending">Pending</option> 
+					<option value="Approved">Approve</option>
+					<option value="Rejected">Reject</option>						
+				</select>
+			</td>
+			<td><input ng-model='leaveRequest.comment'></td>
+			<td>
+				<button ng-click='headCtrl.updateLeaveRequest(leaveRequest)'>Submit</button>
+			</td>
+		</tr>
+	</table>			
+</div>
