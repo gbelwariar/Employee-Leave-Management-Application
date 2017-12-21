@@ -7,5 +7,13 @@ An employee leave management web application in which the employees of an organi
 
 Download the repository - [Employee-Leave-Management-Application](https://github.com/gbelwariar/Employee-Leave-Management-Application) and open the home page - **employee-leave-management-system.html** (*Employee-Leave-Management-Application/employee-leave-management-system.html*) in any browser(preferably Mozilla Firefox). 
 
+## Screenshots (as in Firefox Browser)
+
 ### → Home Page
 <kbd>![Home Page](/screenshots/Home_Page.GIF?raw=true "Home Page")<kbd>
+ 
+### → Page displayed when an employee of the organization logs in. 
+<kbd>![Employee Screen](/screenshots/Employee.GIF?raw=true "Employee Screen")<kbd>
+ 
+### → Page displayed when a head of the organization logs in. 
+<kbd>![Head Screen](/screenshots/Head.GIF?raw=true "Head Screen")<kbd>
