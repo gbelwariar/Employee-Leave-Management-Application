@@ -17,3 +17,7 @@ Download the repository - [Employee-Leave-Management-Application](https://github
  
 ### → Page displayed when a head of the organization logs in. 
 <kbd>![Head Screen](/screenshots/Head.GIF?raw=true "Head Screen")<kbd>
+
+## Technology Stack - 
+
+The application is built on PEAN stack comprising of [PostgreSQL](http://www.postgresql.org/), [Express](http://expressjs.com/), [AngularJS](http://angularjs.org/) and [Node.js](http://www.nodejs.org/).  
