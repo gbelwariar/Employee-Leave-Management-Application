@@ -22,7 +22,6 @@ Download the repository - [Employee-Leave-Management-Application](https://github
 
 The application is built on **PEAN** stack comprising of [**P**ostgreSQL](http://www.postgresql.org/), [**E**xpress](http://expressjs.com/), [**A**ngularJS](http://angularjs.org/) and [**N**ode.js](http://www.nodejs.org/).  
 
-
 ## Components of the Projects
 
 Name of the Component                                                                                                     | Description
@@ -32,4 +31,3 @@ Name of the Component                                                           
 [**Head**](https://github.com/gbelwariar/Employee-Leave-Management-Application/tree/master/head)                          | Responsible to provide the following features to the head of the organization -<br/> 1) Showing the details of all the requests submitted so far by all the employees of the organization.<br/> 2) Providing ability to review the requests by approving/rejecting/putting-them-on-hold and specifying the reason for the same(optional).        
 [**Date Service**](https://github.com/gbelwariar/Employee-Leave-Management-Application/blob/master/services/date-service) | Responsible for providing the APIs for parsing Date objects to YYYY-MM-DD and DD-MM-YYYY format.
 [**Key Service**](https://github.com/gbelwariar/Employee-Leave-Management-Application/blob/master/services/key-service.js)| Responsible for providing unique key to be used as a primary key in the database.
-
