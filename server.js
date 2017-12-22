@@ -10,7 +10,7 @@
 /* 
  *	Schema of 'leave_requests' table - 
  * 		{
- *      key varchar(50),
+ *      		key varchar(50),
  *			username varchar(64),
  *			submission_date varchar(10),
  *			leave_date varchar(10),
