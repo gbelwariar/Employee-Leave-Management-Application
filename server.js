@@ -10,7 +10,7 @@
 /* 
  *	Schema of 'leave_requests' table - 
  * 		{
- *      		key varchar(50),
+ *      key varchar(50),
  *			username varchar(64),
  *			submission_date varchar(10),
  *			leave_date varchar(10),
@@ -35,7 +35,6 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 var conString = "pg://postgres:rachit123@127.0.0.1:5433/testdb";
 
 
-// Fetches all the leave requests.
 app.get('/get-all-leave-requests', function(request, response) {
 		var client = new pg.Client(conString);
 		client.connect();
@@ -47,7 +46,6 @@ app.get('/get-all-leave-requests', function(request, response) {
 });		
 
 
-// Handles the login requests.
 app.post('/login', function(request, response) {
 		var client = new pg.Client(conString);
 		client.connect();
@@ -71,7 +69,6 @@ app.post('/login', function(request, response) {
 });		
 
 
-// Handles all the signup requests.
 app.post('/signup', function(request, response) {
 		var client = new pg.Client(conString);
 		client.connect();
@@ -96,7 +93,6 @@ app.post('/signup', function(request, response) {
 });		
 
 
-// Fetches all leave requests corresponding to a user.
 app.post('/get-leave-requests', function(request, response) {
 		var client = new pg.Client(conString);
 		client.connect();
@@ -108,7 +104,6 @@ app.post('/get-leave-requests', function(request, response) {
 });		
 
 
-// Posts a leave request.
 app.post('/insert-leave-request', function(request, response) {
 		var client = new pg.Client(conString);
 		client.connect();
@@ -138,7 +133,6 @@ app.post('/insert-leave-request', function(request, response) {
 });		
 
 
-// Updates a leave request.
 app.post('/update-leave-request', function(request, response) {
 		var client = new pg.Client(conString);
 		client.connect();
