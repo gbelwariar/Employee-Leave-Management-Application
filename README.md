@@ -10,13 +10,13 @@ Download the repository - [Employee-Leave-Management-Application](https://github
 ## Screenshots (as in Firefox Browser)
 
 ### → Home Page
-<kbd>![Home Page](/screenshots/Home_Page.GIF?raw=true "Home Page")<kbd>
- 
+<img src="screenshots/Home_Page.GIF" class="img-responsive" alt="Home Page"> 
+
 ### → Page displayed when an employee of the organization logs in. 
-<kbd>![Employee Screen](/screenshots/Employee.GIF?raw=true "Employee Screen")<kbd>
- 
+<img src="screenshots/Employee.GIF" class="img-responsive" alt="Employee Screen"> 
+
 ### → Page displayed when a head of the organization logs in. 
-<kbd>![Head Screen](/screenshots/Head.GIF?raw=true "Head Screen")<kbd>
+<img src="screenshots/Head.GIF" class="img-responsive" alt="Head Screen"> 
 
 ## Technology Stack - 
 
