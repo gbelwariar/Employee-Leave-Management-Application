@@ -22,7 +22,7 @@ Download the repository - [Employee-Leave-Management-Application](https://github
 
 The application is built on **PEAN** stack comprising of [**P**ostgreSQL](http://www.postgresql.org/), [**E**xpress](http://expressjs.com/), [**A**ngularJS](http://angularjs.org/) and [**N**ode.js](http://www.nodejs.org/).  
 
-## Components of the Projects
+## Components of the Project
 
 Name of the Component                                                                                                     | Description
 --------------------------------------------------------------------------------------------------------------------------| ------------
