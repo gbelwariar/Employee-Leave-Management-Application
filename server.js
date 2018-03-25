@@ -26,13 +26,20 @@ var app = express();
 var pg = require("pg");
 var http = require("http")
 var bodyParser = require('body-parser');
+var path = require('path');
 
 app.use(cors())		
 
+app.use(express.static(path.join(__dirname, '')));
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 var conString = "pg://postgres:rachit123@127.0.0.1:5433/testdb";
+
+
+app.get('/', function(request, response) {
+	response.sendFile(path.join(__dirname, 'employee-leave-management-system.html'));
+});
 
 
 app.get('/get-all-leave-requests', function(request, response) {
