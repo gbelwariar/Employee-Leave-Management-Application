@@ -5,7 +5,7 @@ An employee leave management web application in which the employees of an organi
  
 ## How to use/install the application 
 
-Download the repository - [Employee-Leave-Management-Application](https://github.com/gbelwariar/Employee-Leave-Management-Application/archive/master.zip) and bring up the server using the command - `node server.js`. Then open any browser(preferably Mozilla Firefox) and go to http://localhost:8080/ to interact with the application.
+Download the repository - [Employee-Leave-Management-Application](https://github.com/gbelwariar/Employee-Leave-Management-Application/archive/master.zip) and install all the dependencies listed in `package-lock.json`. Following the aforementioned steps, bring up the server using the command - `node server.js`. Then open any browser(preferably Mozilla Firefox) and go to http://localhost:8080/ to interact with the application.
 
 ## Screenshots (as in Firefox Browser)
 
