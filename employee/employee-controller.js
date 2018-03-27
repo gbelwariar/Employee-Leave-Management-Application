@@ -1,5 +1,4 @@
-function EmployeeCtrl($http, dateService, keyService) {
-	this.username;
+function EmployeeCtrl($http, $stateParams, dateService, keyService) {
 	this.dateFromClient;
 	this.leaveRequests;
 	
@@ -18,6 +17,9 @@ function EmployeeCtrl($http, dateService, keyService) {
 			}
 		*/
 		this.leaveRequestDetails = {};	
+		// Maintain the order of the next two statements to get the correct username while retrieving
+		// all the leave requests from the database.
+		this.username = $stateParams.username;
 		this.getAndSetLeaveRequests_();
 	};
 }
@@ -62,4 +64,5 @@ function getFullUrl_(relativeUrl) {
 
 angular
 				.module('employeeLeaveManagementSystem')
-				.controller('EmployeeCtrl', ['$http', 'dateService', 'keyService', EmployeeCtrl]);
+				.controller('EmployeeCtrl',
+						['$http', '$stateParams', 'dateService', 'keyService', EmployeeCtrl]);
