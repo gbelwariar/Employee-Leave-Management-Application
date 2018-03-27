@@ -1,17 +1,20 @@
-function HeadCtrl($http) {
+function HeadCtrl($http, $stateParams) {
 	this.allLeaveRequests;
 	
 	this.$onInit = function() {
 		this.httpService_ = $http;	
-		this.getAndSetAllLeaveRequests_();
 		this.statuses = ['Approved', 'Rejected', 'Pending'];
+		// Maintain the order of the next two statements to get the correct username while retrieving
+		// all the leave requests from the database.		
+		this.username = $stateParams.username;
+		this.getAndSetAllLeaveRequests_();
 	};
 }
 
 
 HeadCtrl.prototype.updateLeaveRequest = function(leaveRequest) {
-	this.httpService_.post(
-		getFullUrl_('update-leave-request'),
+	this.httpService_
+		.post(getFullUrl_('update-leave-request'),
 		{
 			key: leaveRequest.key,
 			status: leaveRequest.status,
@@ -41,4 +44,4 @@ function getFullUrl_(relativeUrl) {
 
 angular
 				.module('employeeLeaveManagementSystem')
-				.controller('HeadCtrl', ['$http', HeadCtrl]);
+				.controller('HeadCtrl', ['$http', '$stateParams', HeadCtrl]);
