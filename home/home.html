@@ -1,0 +1,56 @@
+<div class='vertical-separator-from-top-50'>
+	<div class='align-text-center font-size-18'><b>Login</b></div>			
+	<form name='loginForm'>		
+		<div class='margin-left-560'>
+			<div>
+				<label for="login-username">Enter Username</label>
+				<input name='loginUsername' id="login-username" ng-model='homeCtrl.loginDetails.username'
+						required/>
+			</div>
+			<div>
+				<label for="login-password">Enter Password</label>
+				<input name='loginPassword' id="login-password" ng-model='homeCtrl.loginDetails.password'
+						type="password" required/>
+			</div>
+			<div>
+				<button ng-click='homeCtrl.login()'
+								ng-disabled='loginForm.loginUsername.$error.required ||
+														loginForm.loginPassword.$error.required'>
+					Login
+				</button>
+			</div>
+		</div>
+	</form>
+</div>
+<div class='vertical-separator-from-top-100'>
+<div class='align-text-center font-size-18'><b>Sign Up</b></div>			
+<form name='signUpForm'>
+		<div class='margin-left-560'>
+			<div>
+				<label for="signup-username">Select Username</label>
+				<input name='signUpUsername' id="signup-username"
+						ng-model='homeCtrl.signUpDetails.username' required>
+			</div>
+			<div>
+				<label for="signup-password">Select Password</label>
+				<input name='signUpPassword' id="signup-password"
+						ng-model='homeCtrl.signUpDetails.password' type="password" required>
+			</div>
+			<span>Select the role</span>
+			<span ng-repeat='role in homeCtrl.roles'>
+				<label>
+					<input name='roleType' type='radio' value='{{role}}'
+							ng-model='homeCtrl.signUpDetails.role'
+							required='!homeCtrl.signUpDetails.role'>{{role}}
+				</label>
+			</span>
+			<div>
+				<button ng-click='homeCtrl.signUp()'
+								ng-disabled='signUpForm.roleType.$error.required ||
+														signUpForm.signUpUsername.$error.required ||
+														signUpForm.signUpPassword.$error.required'>
+					Sign Up
+				</button>
+			</div>
+		</div>
+</form>		
